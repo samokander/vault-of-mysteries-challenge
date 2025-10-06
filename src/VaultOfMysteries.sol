@@ -7,7 +7,7 @@ library Level1 {
     }
 
     function getStorage() internal pure returns (LevelStorage storage ls) {
-        bytes32 position = keccak256("level1.storage");
+        bytes32 position = keccak256("level1.storage"); // 0x22eb28c83bb42c5c2a9f294d885113bf1046cf5ce0a3a6b672242a78a31176a0
         assembly {
             ls.slot := position
         }
