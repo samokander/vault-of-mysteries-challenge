@@ -1,66 +1,56 @@
-## Foundry
+# Vault of Mysteries Solidity Challenge
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Welcome to the Vault of Mysteries challenge! Your goal is to unlock the
+VaultOfMysteries smart contract and retrieve the funds stored there. This
+challenge will test your ability to interact with EVM smart contracts,
+understand Solidity code, and solve puzzles using on and off-chain tools and
+techniques.
 
-Foundry consists of:
+## Challenge Overview
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+You are provided with the Solidity source code for the `VaultOfMysteries`
+contract. The contract is already deployed to a test network. Your task is to
+unlock each level of the vault by interacting with the contract.
 
-## Documentation
+Each level requires a different approach, including:
 
-https://book.getfoundry.sh/
+- Calling contract functions
+- Calling various `eth_` RPC methods
+- Deploying your own contract to interact with the vault
 
-## Usage
+## Getting Started
 
-### Build
+You will need:
 
-```shell
-$ forge build
-```
+- Access to an Ethereum wallet
+- Some testnet ETH to pay for gas (we can provide this if needed)
 
-### Test
+## Contract Details
 
-```shell
-$ forge test
-```
+- **RPC Node URL:** `https://rpc1.bakerloo.autonity.org/`
+- **Chain ID:** `65010004`
+- **Network Name:** `Bakerloo Testnet`
+- **Currency Symbol:** `ATN`
+- **Block Explorer:** `https://bakerloo.autonity.org/`
+- **Contract Address:** `0xf9c133C1f3359F58902578b2898601b8163b7FD7`
+- **Faucet:** `https://autonity.faucetme.pro/`
 
-### Format
+## Rules
 
-```shell
-$ forge fmt
-```
+There really are no rules. The vault is designed to be unlocked in order, so
+in general, we would expect that you have to call `level0()` before calling
+`level1()`, and so on. However, if you can find a way to skip levels, or
+complete them out of order, that is perfectly acceptable.
 
-### Gas Snapshots
+## Submission
 
-```shell
-$ forge snapshot
-```
+Once you have unlocked all levels, submit:
 
-### Anvil
+- A brief write-up describing your approach for each level
+- Any scripts or transactions you used
+- The final transaction hash showing you unlocked the vault, and the funds
+  were sent to your address
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Don't worry if you cannot unlock all levels. The higher levels are designed to
+be challenging and may require advanced techniques. We are interested in
+learning about your approach and thought process.
