@@ -24,9 +24,9 @@ contract VaultSolver is ILevel2 {
 
     event OwnerChanged(address indexed oldOwner, address indexed newOwner);
 
-    constructor(address vaultAddress, ClueFinder helper, address initialOwner) {
+    constructor(address vaultAddress, address clueFinderAddress, address initialOwner) {
         vault = IVaultOfMysteries(vaultAddress);
-        clueFinder = helper;
+        clueFinder = ClueFinder(clueFinderAddress);
         owner = initialOwner;
 
         // Call infiltrate during construction so this contract becomes the infiltrator.

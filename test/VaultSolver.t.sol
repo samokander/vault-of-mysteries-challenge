@@ -27,7 +27,7 @@ contract VaultSolverForkTest is Test {
         vm.startPrank(hacker);
         vault = VaultOfMysteries(VAULT_ADDRESS);
         clueFinder = new ClueFinder();
-        solver = new VaultSolver(VAULT_ADDRESS, clueFinder, hacker);
+        solver = new VaultSolver(VAULT_ADDRESS, address(clueFinder), hacker);
     }
 
     function test_UnlockLevel0() public {
