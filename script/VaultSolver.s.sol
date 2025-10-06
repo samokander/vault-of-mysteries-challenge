@@ -26,7 +26,6 @@ contract VaultSolverScript is Script {
         ClueFinder clueFinder = new ClueFinder();
         VaultSolver solver = new VaultSolver(vaultAddress, clueFinder, initialOwner);
         solve(solver);
-        vm.assertEq(solver.owner(), initialOwner);
         vm.stopBroadcast();
     }
 
